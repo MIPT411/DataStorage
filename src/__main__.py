@@ -1,5 +1,6 @@
 from .app import app
 from .config import WEB_HOST, WEB_PORT, WEB_DEBUG
+
 # Include modules
 from .modules import auth_module
 
