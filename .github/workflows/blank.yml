@@ -12,6 +12,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    - name: Print working directory
+      run: pwd
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
       with:
@@ -21,4 +23,4 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Check with black
-      run: python -m black -q --check src
+      run: python -m black -q --check /src
